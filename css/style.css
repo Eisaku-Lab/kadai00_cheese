@@ -1,0 +1,457 @@
+/*
+█████████████████████████████████████████████████████████████
+  基本設定
+█████████████████████████████████████████████████████████████
+*/
+/* Base Typography */
+:root {
+  --font-size-base: 16px;
+  --line-height-base: 1.6875;
+  --font-family-mincho: "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Hiragino Mincho", "Yu Mincho", YuMincho, "MS PMincho", "Times New Roman", Times, serif;
+
+  /* Theme Colors */
+  --color-primary: #2b3f6b;
+  --color-secondary: #ff8c42;
+  --color-tertiary: #d4a574;
+  --color-accent: #ac9e7f;
+  /* for Service headings */
+  --color-text: #222222;
+}
+
+html {
+  font-size: var(--font-size-base);
+  /* 16px */
+  line-height: var(--line-height-base);
+  /* 1.6875 */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-mincho);
+  font-feature-settings: "palt";
+  font-size: 1rem;
+  letter-spacing: 0.125em;
+  line-height: var(--line-height-base);
+  /* 1.6875 */
+  color: var(--color-text);
+  /* #222222 */
+  background-color: #fff;
+}
+
+.plan__footer {
+  text-align: center;
+  margin-top: 48px;
+  line-height: 2;
+}
+
+.plan__ctaLink {
+  display: inline-block;
+  max-width: 320px;
+  width: 100%;
+  background-color: var(--color-secondary);
+  /* #ff8c42 */
+  color: #ffffff;
+  padding: 16px 64px;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 21px;
+  line-height: 1.8;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.plan__ctaLink:hover {
+  background-color: #e67a2e;
+}
+
+/*
+█████████████████████████████████████████████████████████████
+  セクション共通ヘッダー
+█████████████████████████████████████████████████████████████
+*/
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin: 0 0 2.5rem;
+}
+
+.section-header__title {
+  /* Japanese text */
+  font-size: 16px;
+  line-height: var(--line-height-base);
+  /* 1.6875 */
+  margin: 0 0 26px;
+  /* top & bottom 26px */
+  font-weight: 700;
+}
+
+.section-header__title--white {
+  color: #fff;
+}
+
+.section-header__title::before {
+  /* English text from data-en attribute */
+  content: attr(data-en);
+  display: block;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.section-header::after {
+  content: "";
+  display: block;
+  width: 80px;
+  border-bottom: 2px solid var(--color-primary);
+  /* #2b3f6b */
+  margin: 0 auto;
+}
+
+.section-header--inverted::after {
+  border-bottom-color: #ffffff;
+}
+
+/*
+█████████████████████████████████████████████████████████████
+  料金プランセクション
+█████████████████████████████████████████████████████████████
+*/
+/* Plan Section */
+.plan {
+  padding: 80px 16px 72px;
+  background-color: var(--color-primary);
+  /* #2b3f6b */
+}
+
+.plan__grid {
+  display: flex;
+  gap: 96px;
+  max-width: 1080px;
+  margin: 96px auto 0;
+}
+
+.plan__card {
+  width: 540px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 56px 32px 48px;
+}
+
+.plan__heading {
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.plan__title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  background: var(--color-tertiary);
+  /* #d4a574 */
+  padding: 16px 20px;
+  border-radius: 999px;
+}
+
+.plan__price {
+  margin-bottom: 32px;
+  color: var(--color-text);
+  /* #222222 */
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+
+.plan__price span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.plan__note {
+  font-size: 14px;
+  color: #b6b6b6;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.plan__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+  flex-grow: 1;
+}
+
+.plan__feature {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  color: var(--color-text);
+  /* #222222 */
+}
+
+.plan__feature:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
+.plan__feature img {
+  margin-right: 16px;
+}
+
+/*
+█████████████████████████████████████████████████████████████
+  課題
+█████████████████████████████████████████████████████████████
+*/
+
+/* メインセクション */
+
+.header-image {
+  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mainbg-text {
+  font-size: 53px;
+  position: absolute;
+  top: 250px;
+  left: 140px;
+  font-weight: bold;
+  color: #fcfdfe;
+  text-shadow: 3px 3px 4px #989898;
+}
+
+.section-title {
+  font-size: 30px;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  top: 70px;
+  margin-bottom: 80px;
+}
+
+.section-title::after {
+  content: "";  /* 空の要素 */
+  display: block;  /*ブロック要素*/
+  width: 80px;
+  height: 4px;
+  background-color: #449ae5;  /* 背景色 */
+  margin: 15px auto 140px;
+  border-radius: 2px;  /* 角を丸くする */
+}
+
+.blue-text {
+  color: #449ae5;
+  font-size: 25px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Content Section */
+.card {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 50px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.about_01 {
+  margin-left: 100px;
+}
+
+.about_02 img {
+  border-radius: 10px;
+}
+
+.about-text {
+  margin-left: 50px;
+  flex: 1;
+}
+
+.about_02 {
+  /* object-position: center; */
+  text-align: center;
+  margin-bottom: 60px;
+  /* max-width: 100px; */
+
+  /* height: auto; */
+  /* margin-left: 100px; */
+}
+
+.course {
+  background-color: #f6f6f6;
+}
+
+.about-lead {
+  color: #449ae5;
+  font-weight: bold;
+  margin-top: 120px;
+  margin-bottom: 80px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.course-lead {
+  color: #449ae5;
+  font-weight: bold;
+  margin-top: 120px;
+  margin-bottom: 60px;
+  font-size: 21px;
+  text-align: center;
+}
+
+.course-text {
+  margin-left: 50px;
+  flex: 1;
+}
+
+.about_03 {
+  margin-left: 100px;
+}
+
+.about_04 {
+  margin-left: 100px;
+}
+
+.course_02 {
+  margin-left: 100px;
+}
+
+.news_img {
+  margin-left: 100px;
+}
+
+.access {
+  background-color: #f6f6f6;
+}
+
+.access-blue-text {
+  color: #449ae5;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.access-content {
+  margin-left: 100px;
+}
+
+.access-list {
+  background-color: #f8f6f3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 6px #4f4f4f;
+}
+
+.newsdate {
+  font-size: 12px;
+  margin-bottom: 100px;
+}
+
+.news-text {
+  margin-top: 12px;
+}
+
+.contact-text {
+  text-align: center;
+}
+
+.contact-lead {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+.contact-note {
+  font-size: 13px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #165790;
+}
+
+.contact-form {
+  margin: 0 auto;
+  margin-left: 433px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  padding: 50px 20px;
+  width: 500px;
+  border-radius: 30px;
+  /* 角を丸くする：10px */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* 影をつける */
+  font-size: 15px;
+  background-color: #edebeb
+}
+
+.form-label {
+  margin-top: 15px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.form-input input,
+.form-input select,
+.form-input textarea {
+  width: 450px;
+  /* 幅：100% */
+  /* height: 7px; */
+  padding: 12px 15px;
+  /* 内側の余白：上下12px、左右15px */
+  border: 2px solid #ddd;
+  /* 枠線：2px、薄いグレー */
+  border-radius: 6px;
+  /* 角を丸くする：6px */
+  transition: border-color 0.3s ease;
+  /* 枠線の色の変化をなめらかに */
+}
+
+.form-input select {
+  width: 480px;
+}
+
+.submit-button {
+  background-color: #ff2200;
+  /* 背景色：オレンジ */
+  color: #fff;
+  /* 文字色：白 */
+  padding: 15px 70px;
+  /* 内側の余白：上下15px、左右70px */
+  border: none;
+  /* 枠線なし */
+  border-radius: 50px;
+  /* 角を丸くする：50px（丸いボタン） */
+  font-size: 18px;
+  /* 文字サイズ：18px */
+  font-weight: bold;
+  /* 太字 */
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+  /* 影をつける */
+  margin-top: 30px;
+}
+
+/* フッター */
+.footer {
+  border-color: #919191;
+  color: #878686;
+  padding: 30px;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  text-align: center;
+  padding: auto;
+}
+
+.copywrite {
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
